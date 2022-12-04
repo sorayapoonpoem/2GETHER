@@ -1,0 +1,76 @@
+.containerpf {
+    position: fixed;
+
+    left: 0;
+
+    top: 150px;
+
+
+    transform: rotate(-90deg);
+    transform-origin: center calc(50vh);
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50px;
+    margin: 1em auto;
+    padding: 5em;
+    padding-top: 0;
+    width: 1250px;
+    height: 500px;
+
+    transform: rotate(90deg);
+
+
+
+    text-align: center;
+
+
+}
+.ACPro{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.frame {
+    position: relative;
+    padding-top: 30px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    position: relative;
+    background: #fff;
+    height: 300px;
+    width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: jump;
+    border-radius: 10px;
+  }
+
+  .btnsos{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+ 

@@ -1,0 +1,154 @@
+/* Reset */
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+
+
+/* ********* */
+
+:root {
+    --black: #23252f;
+    --neon-green: #64ed85;
+    --white: #efe;
+    --pink: #e7786f;
+    --light-blue: #bccffa;
+    --dark-blue--1: #4b6cb7;
+    --dark-blue--2: #182848;
+}
+
+
+/* ************************ */
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 130deg;
+    inherits: false;
+}
+
+
+/***************************  */
+
+
+
+.btnsos {
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--dark-blue--2);
+    padding: 2em 4em;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.btnsos h2 {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    background: -webkit-linear-gradient(-45deg, #ff00c1, #00fff9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btnsos::after,
+.btnsos::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(var(--rotate),#ff00c1 0%, #c54a6f 25%, #b91e74 50%, #c01e1e 80%, #cf030d 100%);
+    width: 105%;
+    height: 110%;
+    left: -2.5%;
+    top: -5%;
+    z-index: -1;
+    border-radius: 10px;
+  transition: --rotate 9999s linear;
+}
+
+.btnsos:hover:after,
+.btnsos:hover::before {
+  --rotate: 3600deg;
+  transition: --rotate 20s linear;
+}
+
+.btnsos:hover::before {
+    animation: fade 1.2s;
+}
+
+
+/* ******************* */
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+        filter: blur(10px);
+    }
+}
+
+
+/* ปุ่มหน้าแรก */
+button {
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--dark-blue--2);
+    padding: 2em 4em;
+    font-family: 'Paytone One', sans-serif;
+    
+}
+button::after,
+button::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(var(--rotate), #4900ff 50%, #00b8ff 80%, #00fff9 100%);
+    width: 105%;
+    height: 110%;
+    left: -2.5%;
+    top: -5%;
+    z-index: -1;
+    border-radius: 10px;
+  transition: --rotate 9999s linear;
+}
+
+button:hover:after,
+button:hover::before {
+  --rotate: 3600deg;
+  transition: --rotate 20s linear;
+}
+
+button:hover::before {
+    animation: fade 1.2s;
+}
+
+p{
+    text-decoration: none;
+    font-size: 20px;
+    background: -webkit-linear-gradient(-45deg, #e7e3e6, #d1d1d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    
+  }

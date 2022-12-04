@@ -1,0 +1,59 @@
+
+.badge {
+    width:400px;
+    aspect-ratio: 1.59; 
+    display: flex;
+    justify-content: center;
+    background:
+      linear-gradient(90deg, #0000 33%, #fff9, #0000 67%) var(--_p,100%)/300% no-repeat,
+      /* repeating-linear-gradient(135deg,#547980 0 10px,#594F4F 0 20px) 0% 101%/100% 10% no-repeat,
+      repeating-linear-gradient(#000 0 1px,#0000 0 5px) 93% 50%/10% 50% no-repeat,
+      repeating-linear-gradient(#000 0 1px,#0000 0 8px) 93% 50%/10% 50% no-repeat,
+      repeating-linear-gradient(#000 0 1px,#0000 0 10px) 93% 50%/10% 50% no-repeat,
+      repeating-linear-gradient(#000 0 1px,#0000 0 15px) 93% 50%/10% 50% no-repeat,
+      repeating-linear-gradient(#000 0 2px,#0000 0 18px) 93% 50%/10% 50% no-repeat, */
+      radial-gradient(50% 100% at bottom,#adadad 98%,#0000) 13% 71.5%/25% 20% no-repeat,
+      radial-gradient(50% 50%,#adadad 98%,#0000) 17% 40%/15% 27% no-repeat,
+      linear-gradient(#d8d8d8 0 0) 10% 50%/30% 55% no-repeat,
+      radial-gradient(28.28px at 50% calc(100% - 40.00px),#D5DED9 98%,#0000 102%) calc(50% - 40px) 0/80px 40px repeat-x,
+      radial-gradient(28.28px at 50% calc(100% + 20.00px),#0000 98%,#D5DED9 102%) 50% -20px/80px 40px repeat-x,
+      #f2f2f2;
+    border-radius: 10px;
+    font-family: sans-serif;
+    white-space: pre;
+    padding: 45px 0 0 107px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.4;
+    box-shadow: 7px 2px 10px rgb(255, 255, 255);
+    transform: perspective(500px) rotateY(-12deg);
+    transition: .4s;
+    cursor: pointer;
+    position: relative;
+      margin-top: 50px; 
+     margin-left: 50px; 
+       
+    
+  }
+  .badge:hover {
+    box-shadow: -7px 2px 10px #0004;
+    transform: perspective(500px) rotateY(12deg);
+    --_p: 0%;
+  }
+  
+  .badge {
+    font-size: 15px;
+    font-weight: 900;
+   
+  }
+  .badge:first-line {
+    font-size: 22px;
+    font-weight: 900;
+   
+  }
+  .badge::before {
+    content: "\A Name: Bee \A \A                \A               Issue Date: 10/10/2565 \A  \A              Expiry Date: 10/10/2570";
+  }
+  
+  
+ 
