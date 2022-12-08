@@ -56,7 +56,7 @@ export default function Post({ posts }) {
         SecureToken: "7d5c8092-1a70-402d-bfcf-913f61b98380",
         To: detail.emergency_email,
         From: '6231302007@lamduan.mfu.ac.th',
-        Subject: "Emergency SOS Message from" + detail.name,
+        Subject: "Emergency SOS Message from " + detail.name,
         Body: "Emergency SOS message services from 2Gether. You are receiving this message because " + detail.name + " listed you as an emergency contact."
       }).then(
         message => alert(message),
