@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useSession } from "next-auth/react"
 import TextField from '@mui/material/TextField';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,24 +11,23 @@ export default function Post() {
     const [seat, setSeat] = useState('');
     const [cartype, setCartype] = useState('');
     const [price, setPrice] = useState('');
-    const router = useRouter();
-    const { query: { uid }, } = router;
-    const props = {
-        uid,
-    };
-    console.log(uid);
-    const addPost = async () => {
-        await fetch('http://localhost:3000/api/post/post', {
-            method: "POST",
-            body: JSON.stringify({ "userID": props.uid, "name": name, "title": title,"seat": seat, "cartype": cartype,  "price": price }),
-            headers: { "Content-Type": "application/json" }
-        }).then(response => {
-            if (response.ok) {
-                alert("Post Success")
-            } throw Error('Server error!');
-        });
-    }
+    const { data: session } = useSession()
+  
 
+    if (session) {
+        const uid = session.user.name.userID
+        console.log(uid);
+        const addPost = async () => {
+            await fetch('http://localhost:3000/api/post/post', {
+                method: "POST",
+                body: JSON.stringify({ "userID": uid, "name": name, "title": title,"seat": seat, "cartype": cartype,  "price": price }),
+                headers: { "Content-Type": "application/json" }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Post Success")
+                } throw Error('Server error!');
+            });
+        }
     return (
         <div>
             <Container>
@@ -79,4 +78,5 @@ export default function Post() {
             </Container>
         </div>
     );
+}
 }

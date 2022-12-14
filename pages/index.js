@@ -53,7 +53,7 @@ export default function Home() {
         <Button onClick={signIn} variant="outlined" color='primary' >LOGIN</Button>
         {/* <Button href={`/register`} variant="outlined" color='primary' >Register</Button> */}
         <br></br>
-        <p><Link href="/register" >If you don't have account click here</Link></p>
+        <p class = "regis"><Link href="/register" >If you don't have account click here</Link></p>
         <h1><span>Please Login </span></h1>
 
 
